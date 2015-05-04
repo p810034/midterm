@@ -1,0 +1,208 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: 'Arvo', serif;
+	font-size:14px;
+	background: url("http://i.imgur.com/yRMARVk.jpg") repeat;
+	color: #c8ccd1;
+}
+a {
+	font-size:14px;
+	color:#f1bb00;
+	text-decoration:underline;
+}
+a:hover {
+	font-size:14px;
+	color:#f1bb00;
+	text-decoration:none;
+}
+h1 {
+	color:#6e91af;
+	font-weight:normal;
+	padding:10px 0 10px 0;
+}
+h2 {
+	color:#ffffff;
+	padding:30px 0 10px 0;
+}
+p {
+	line-height: 150%;
+}
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+#header {
+	background:url("http://i.imgur.com/gpp2jdh.jpg") repeat;
+	border-bottom:3px solid #25384e;
+}
+#navcontainerBox h1 {
+	float:left;
+	padding:15px 0 0 0;
+	font-weight:normal;
+}
+#header h1 a {
+	color:#f1bb00;
+	font-size:36px;
+	text-decoration:none;
+}
+.iContent ul {
+	padding:20px 50px 20px 50px;
+}
+.iContent ul a {
+	text-decoration:none;
+}
+.iContent li {
+	padding:7px 0 7px 0;
+	border-bottom:1px solid #465a76;
+	list-style:none;
+}
+.iContent ul a:hover {
+	color:#c8ccd1;
+}
+.iContainer {
+	width:960px;
+	margin:0 auto;
+	padding:20px 0 0 0;
+}
+.i {
+	float:left;
+	height:480px;
+}
+.iContent {
+	margin-left:420px;
+}
+#mainContent {
+}
+.picFloatRight {
+	float:right;
+	padding:10px 0 10px 25px;
+}
+.picFloatLeft {
+	float:left;
+	padding:10px 25px 10px 0;
+}
+#footer {
+	border-top:1px solid #4d575f;
+	width:100%;
+	margin-top:20px;
+}
+#footer p {
+	width:960px;
+	margin: 0 auto;
+	padding: 30px 0;
+	text-align:center;
+	font-size:11px;
+}
+#footer p a {
+	font-size:11px;
+}
+.clearer {
+	clear:both;
+}
+/*main menu*/
+#navcontainer {
+	background: url("http://i.imgur.com/BbyJlTs.png") repeat-x;
+}
+#navcontainerBox ul {
+	padding:22px 0;
+}
+#navcontainerBox {
+	margin: 0 auto;
+	list-style-type: none;
+	color: #FFF;
+	width: 960px;
+	height:77px;
+	text-align: right;
+}
+#navcontainerBox li { 
+	display: inline;
+	padding:20px 0px;
+}
+#navcontainerBox li a {
+	text-decoration: none;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;	
+}
+#navcontainerBox li a:hover {
+	text-decoration: none;
+	background-color: #f1bb00;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;
+	border-bottom:2px solid #bf9400;
+}
+#active a {
+	text-decoration: none;
+	background-color: #f1bb00;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;
+	border-bottom:2px solid #bf9400;
+}
+  </style>
+<div id="header">
+	<div id="navcontainer">
+    	<div id="navcontainerBox">
+            <h1><a href="">沈政龍的空間</a></h1>
+            <ul id="navlist">
+                <li id="active"><a href="#">主頁</a></li>
+                <li><a href="https://www.facebook.com/chulung.shin">Facebook</a></li>
+                <li><a href="http://chulung-shin.blogspot.tw/">Blog</a></li>
+                <li><a href="https://www.youtube.com/channel/UCSWNaPU4p-HDYwXubAp92Cg">Youtube</a></li>
+                <li><a href="https://github.com/p810034">Github</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="iContainer">
+        <div class="i">
+            <img src="http://i.imgur.com/KqiyJqf.png" alt="" />
+        </div>
+        <div class="iContent">
+        	<h1>Welcome</h1>
+            <p>
+                Hello!!我叫沈政龍，這是我在陳鍾誠教授的網路程式設計課程裡的第一個網頁。
+            </p>
+            <ul>
+                <li><a href="">Hello!!我叫沈政龍</a></li>
+                <li><a href="">這是我在陳鍾誠教授的網路程式設計課程裡的第一個網頁</a></li>
+            </ul>
+        </div>
+        <div class="clearer"></div>
+    </div>
+</div>
+<!-- end #header -->
+<!-- begin #container -->
+<div id="container">
+    <!-- begin #mainContent -->
+    <div id="mainContent">
+    	<<h2><a href="http://p810034.github.io/html1/index2.html">關於我</a></h2>
+        <p>
+         網頁內容還沒決定那就隨便放部影片吧</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ogwAddM5Ang" frameborder="0" allowfullscreen></iframe>
+        <div class="clearer"></div>
+    </div>
+    <!-- end #mainContent -->
+</div>
+<!-- end #container -->
+  <h1>Posts</h1>
+  <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+  <p><a href="/post/new">Create a Post</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">Read post</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

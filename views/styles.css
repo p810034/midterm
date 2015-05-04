@@ -1,0 +1,151 @@
+/*
+Design by Free Responsive Templates
+http://www.free-responsive-templates.com
+Released for free under a Creative Commons Attribution 3.0 Unported License (CC BY 3.0) 
+*/
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: 'Arvo', serif;
+	font-size:14px;
+	background: url(images/siteBackground.jpg) repeat;
+	color: #c8ccd1;
+}
+a {
+	font-size:14px;
+	color:#f1bb00;
+	text-decoration:underline;
+}
+a:hover {
+	font-size:14px;
+	color:#f1bb00;
+	text-decoration:none;
+}
+h1 {
+	color:#6e91af;
+	font-weight:normal;
+	padding:10px 0 10px 0;
+}
+h2 {
+	color:#ffffff;
+	padding:30px 0 10px 0;
+}
+p {
+	line-height: 150%;
+}
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+#header {
+	background:url(images/siteBackground2.jpg) repeat;
+	border-bottom:3px solid #25384e;
+}
+#navcontainerBox h1 {
+	float:left;
+	padding:15px 0 0 0;
+	font-weight:normal;
+}
+#header h1 a {
+	color:#f1bb00;
+	font-size:36px;
+	text-decoration:none;
+}
+.iContent ul {
+	padding:20px 50px 20px 50px;
+}
+.iContent ul a {
+	text-decoration:none;
+}
+.iContent li {
+	padding:7px 0 7px 0;
+	border-bottom:1px solid #465a76;
+	list-style:none;
+}
+.iContent ul a:hover {
+	color:#c8ccd1;
+}
+.iContainer {
+	width:960px;
+	margin:0 auto;
+	padding:20px 0 0 0;
+}
+.i {
+	float:left;
+	height:480px;
+}
+.iContent {
+	margin-left:420px;
+}
+#mainContent {
+}
+.picFloatRight {
+	float:right;
+	padding:10px 0 10px 25px;
+}
+.picFloatLeft {
+	float:left;
+	padding:10px 25px 10px 0;
+}
+#footer {
+	border-top:1px solid #4d575f;
+	width:100%;
+	margin-top:20px;
+}
+#footer p {
+	width:960px;
+	margin: 0 auto;
+	padding: 30px 0;
+	text-align:center;
+	font-size:11px;
+}
+#footer p a {
+	font-size:11px;
+}
+.clearer {
+	clear:both;
+}
+/*main menu*/
+#navcontainer {
+	background: url(images/menuBackground.png) repeat-x;
+}
+#navcontainerBox ul {
+	padding:22px 0;
+}
+#navcontainerBox {
+	margin: 0 auto;
+	list-style-type: none;
+	color: #FFF;
+	width: 960px;
+	height:77px;
+	text-align: right;
+}
+#navcontainerBox li { 
+	display: inline;
+	padding:20px 0px;
+}
+#navcontainerBox li a {
+	text-decoration: none;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;	
+}
+#navcontainerBox li a:hover {
+	text-decoration: none;
+	background-color: #f1bb00;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;
+	border-bottom:2px solid #bf9400;
+}
+#active a {
+	text-decoration: none;
+	background-color: #f1bb00;
+	color: #FFF;
+	padding: 20px 20px;
+	font-size:24px;
+	border-bottom:2px solid #bf9400;
+}
+
